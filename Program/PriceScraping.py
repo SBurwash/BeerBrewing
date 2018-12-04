@@ -44,7 +44,6 @@ class BeerProgram:
 
             reader = csv.reader(f)
             for row in reader:
-
                 self.compteur = 0
                 for element in row:
                     if not firstLine:
