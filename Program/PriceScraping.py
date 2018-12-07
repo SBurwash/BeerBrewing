@@ -31,7 +31,7 @@ class BeerProgram:
         for elem in self.elements:
             if elem == name:
                 return True
-            return False
+        return False
     def addNewElement(self, type, name, stringPrice):
         price = self.getPriceChoppeB(stringPrice)
         weight = self.getWeightChoppeB(stringPrice)
@@ -44,6 +44,7 @@ class BeerProgram:
 
             reader = csv.reader(f)
             for row in reader:
+
                 self.compteur = 0
                 for element in row:
                     if not firstLine:
@@ -65,11 +66,11 @@ class BeerProgram:
             if(self.elements[name].Type == "houblon"):
                 print("\n" + name)
                 for weight in self.elements[name].Price:
-                    print("\t"+ str(weight) + " - " + str(self.elements[name].Price[weight]))
+                    print("\t"+ str(weight) + "g - " + str(self.elements[name].Price[weight]) + "$")
         print("\n Malt: ")
         for name in self.elements:
             if (self.elements[name].Type == "malt"):
                 print("\n" + name)
                 for weight in self.elements[name].Price:
-                    print("\t" + str(weight) + " - " + str(self.elements[name].Price[weight]))
+                    print("\t" + str(weight) + "g - " + str(self.elements[name].Price[weight]) + "$")
 
