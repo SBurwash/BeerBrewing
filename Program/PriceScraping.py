@@ -60,17 +60,16 @@ class BeerProgram:
 
 
 
-    def printElement(self):
-        print("Houblon: \n")
+    #def sortPrice(self, element, weight):
+
+
+    def printElement(self, type):
+        print(type + ": \n")
         for name in self.elements:
-            if(self.elements[name].Type == "houblon"):
+            if(self.elements[name].Type == type):
                 print("\n" + name)
                 for weight in self.elements[name].Price:
                     print("\t"+ str(weight) + "g - " + str(self.elements[name].Price[weight]) + "$")
-        print("\n Malt: ")
-        for name in self.elements:
-            if (self.elements[name].Type == "malt"):
-                print("\n" + name)
-                for weight in self.elements[name].Price:
-                    print("\t" + str(weight) + "g - " + str(self.elements[name].Price[weight]) + "$")
+                print(self.elements[name].Weight)
+
 

@@ -4,9 +4,10 @@ class BeerElement:
         self.Type = type
         self.Name = name
         self.Price = {}
+        self.Weight = []
 
 
     def setPrice(self, weight, price):
-
+        self.Weight.append(weight)
         self.Price[weight] = price
 
